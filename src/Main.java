@@ -1,11 +1,13 @@
 public class Main {
 
     public static void main(String[] args) {
-        Vehicle miIbiza = new Vehicle();
-        Vehicle miBMW = new Vehicle("BMW", "i3", null,0);
-        System.out.println(miIbiza.getConsumo());
-        System.out.println(miIbiza.getMarca());
-        System.out.println(miBMW.getModelo());
+        Vehicle miIbiza = new Vehicle("Seat", "Ibiza","verde",8,false,5);
+        Vehicle miBMW = new Vehicle("BMW", "i3", "azul",0,true);
+        miIbiza.subirMarcha();
+        miIbiza.subirMarcha();
+        miBMW.subirMarcha();
+        System.out.println(miIbiza.toString());
+        System.out.println(miBMW.toString());
 
     }
 }
