@@ -15,6 +15,14 @@ public class Main {
         System.out.println(p1.getX());
         System.out.println(p2.getDistance(p1));
 
+        Rectangulo r1 = new Rectangulo(p1,p2);
+        System.out.println(r1.perimeter());
+        Rectangulo r2 = new Rectangulo(p3,5,9);
+        System.out.println(r2.area());
+
+        System.out.println(r1.toString());
+        System.out.println(r2.toString());
+
     }
 
 

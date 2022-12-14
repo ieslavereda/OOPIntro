@@ -32,11 +32,27 @@ public class Rectangulo {
         superiorIzquierda.moveUp(distance);
     }
 
-    //getBase - getHeight
     public int getBase() {
         return (int) (inferiorIzquierda.getDistance(inferiorDerecha));
     }
+
+    public int getHeight() {
+        return (int) (inferiorDerecha.getDistance(superiorDerecha));
+    }
     // perimeter - area
+    public int perimeter(){
+        return 2*(getBase()+getHeight());
+    }
+
+    public int area(){
+        return getBase()*getHeight();
+    }
+
+    @Override
+    public String toString(){
+        return inferiorIzquierda +","+ superiorIzquierda +","+
+                superiorDerecha +","+ inferiorDerecha;
+    }
 
     //https://github.com/ieslavereda/OOPIntro
 
