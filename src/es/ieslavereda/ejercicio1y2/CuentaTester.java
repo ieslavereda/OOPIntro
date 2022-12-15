@@ -10,9 +10,19 @@ public class CuentaTester {
         c1.reintegro(1000);
         c2.transferencia(c1,25000);
 
+        Tarjeta t1 = new Tarjeta(c2,"Alejandro",7000);
+        Tarjeta t2 = new Tarjeta(c2, 7000);
+
+        t1.pagoCredito(5000);
+        t2.pagoDebito(5000);
+        t1.pagoCredito(5000);
+        t1.pagoDebito(-5000);
+        t1.saldarDeuda();
 
         System.out.println(c1.toString());
         System.out.println(c2.toString());
         System.out.println(c3.toString());
+        System.out.println(t1.toString());
+        System.out.println(t2.toString());
     }
 }
